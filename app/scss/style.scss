@@ -1,8 +1,141 @@
-
-
 @import 'vars';
 @import 'fonts';
 @import 'reset';
 @import 'global';
+
+
+.header {
+
+  &__top {
+    padding: 70px 0px;
+  }
+}
+
+.logo {
+  margin-right: auto;
+  border-radius: 5px;
+  transition: box-shadow 0.4s,
+    opacity 0.3s;
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 45px;
+  }
+
+  &__link {
+    border-radius: 5px;
+    color: $default;
+    transition: box-shadow 0.3s,
+      color 0.3s;
+      @extend %rubik-300;
+  
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px 0 rgba(49, 53, 43, 0.5);
+    }
+  }
+
+  &__link--active {
+    color: $accent;
+  }
+}
+
+.user {
+  margin-left: 50px;
+  padding-right: 10px;
+  color: #FFFFFF;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  display: flex;
+
+  &__btn {
+    padding: 10px 11px 4px 12px;
+    margin-left: 10px;
+    position: relative;
+    border-radius: 5px;
+    transition: box-shadow .3s,
+      background-color .3s,
+      color .3s;
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      background-color: rgba(255, 122, 80, 0.1);
+    }
+
+    &:hover {
+      background-color: #ff7a50;
+
+      ellipse,
+      path {
+        stroke: #FFFFFF;
+      }
+    }
+
+    &:active {
+      background-color: rgba(255, 122, 80, 0.1);
+
+      ellipse,
+      path {
+        stroke: black;
+      }
+    }
+  }
+
+  .user__btn:hover .user__num {
+    background-color: #FFFFFF;
+    color: #ff7a50;
+  }
+
+  .user__btn:active .user__num {
+    background-color:#ff7a50;
+    color: #FFFFFF;
+  }
+
+  &__num {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $accent;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    transform: translateX(-5px);
+    text-align: center;
+  }
+}
+
+
+
+
 
 @import 'media';

@@ -1,3 +1,13 @@
-body{
-  
+body {
+  min-height: 100vh;
+  color:$default;
+  font-size: 18px;
+  line-height: 1.4;
+  @extend %rubik-400;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
