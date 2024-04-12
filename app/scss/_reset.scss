@@ -73,6 +73,7 @@ button {
   appearance: none;
   padding: 0;
   border: 0;
+  outline: transparent;
   background-color: transparent;
   cursor: pointer;
 }
@@ -89,4 +90,3 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
