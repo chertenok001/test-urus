@@ -2,14 +2,20 @@ html {
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+
 *,
 *::after,
 *::before {
   box-sizing: inherit;
 }
 
-ul[class],
-ol[class] {
+ul,
+ol{
   padding: 0;
 }
 
@@ -21,8 +27,8 @@ h4,
 h5,
 h6,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -32,7 +38,7 @@ dd {
   margin: 0;
 }
 
-ul[class] {
+ul{
   list-style: none;
 }
 
@@ -46,10 +52,6 @@ button,
 textarea,
 select {
   font: inherit;
-}
-
-a {
-  text-decoration: none;
 }
 
 address {
@@ -73,20 +75,7 @@ button {
   appearance: none;
   padding: 0;
   border: 0;
-  outline: transparent;
   background-color: transparent;
   cursor: pointer;
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
