@@ -7,17 +7,17 @@ $white:#FFFFFF;
 $peachpuff:#fff2ed;
 $bg:#F9FAFF;
 $link:#ECECEC;
+$other-light:#FFAE94;
 
 %rubik-300 {
   font-family: 'Rubik', sans-serif;
   font-weight: 300;
 }
 
-%rubik-italic{
-   font-family: 'Rubik';
-   font-weight: 400;
-   font-style: italic;
-
+%rubik-italic {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-style: italic;
 }
 
 %rubik-400 {
@@ -30,3 +30,15 @@ $link:#ECECEC;
   font-weight: 500;
 }
 
+%bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+$breakpoints: (
+  "phone": 576px,
+  "tablet": 768px,
+  "tablet-2": 992px,
+  "desktop": 1200px
+  );
