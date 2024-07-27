@@ -8,6 +8,7 @@ $peachpuff:#fff2ed;
 $bg:#F9FAFF;
 $link:#ECECEC;
 $other-light:#FFAE94;
+$internal:#faeded;
 
 %rubik-300 {
   font-family: 'Rubik', sans-serif;
@@ -36,9 +37,18 @@ $other-light:#FFAE94;
   background-position: center center;
 }
 
+%checkbox-non{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
 $breakpoints: (
   "phone": 576px,
   "tablet": 768px,
   "tablet-2": 992px,
   "desktop": 1200px
   );
+

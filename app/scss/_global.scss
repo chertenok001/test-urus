@@ -8,10 +8,10 @@ body {
   font-weight: 400;
   @extend %rubik-400;
   background-color: $bg;
-
 }
 
-.lock {
+.lock,
+.close {
   overflow: hidden;
   position: relative;
 
@@ -24,8 +24,8 @@ body {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
   }
-
 }
+
 
 .section {
   padding: 60px 0;
@@ -117,7 +117,6 @@ body {
     text-decoration: none;
     box-shadow: none;
   }
-
 }
 
 .animation-btn {
@@ -191,4 +190,30 @@ body {
 
 .f-aic {
   align-items: center
+}
+
+.filters-title {
+  @extend %rubik-400;
+  font-size: 24px;
+  line-height: 1.2;
+  color: $title;
+  letter-spacing: 3%;
+  padding: 15px 0 15px 15px;
+  border-bottom: 1px solid $link;
+}
+
+.filter {
+  max-width: 270px;
+  width: 100%;
+  border: 1px solid $link;
+  border-radius: 5px;
+  background-color: $white;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.filter-form {
+  padding: 25px 0 27px 15px;
 }
