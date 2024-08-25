@@ -1,0 +1,78 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  &__prev,
+  &__list,
+  &__prev-next {
+    width: 48px;
+    height: 48px;
+    border-radius: 3px;
+    background-color: $internal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__list {
+    transition: background-color 0.5s, box-shadow 0.5s,
+      color 0.5s;
+
+    &:nth-child(2):hover,
+    &:nth-child(4):hover,
+    &:nth-child(5):hover{
+      background-color: $accent;
+      color: $white;
+    }
+
+    & :focus {
+      box-shadow: 0 0 0 2px $accent;
+    }
+
+    &:active {
+      box-shadow: inset 0 -1px 4px 2px rgba(0, 0, 0, 0.15);
+      background-color: $internal;
+      color: $title
+    }
+  }
+  
+  &__item {
+    display: flex;
+    justify-content: center;
+    padding: 0 6px;
+
+    @include mq('tablet') {
+
+      & li:nth-child(2),
+      li:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+
+  &__icon {
+    width: 12px;
+    height: 18px;
+
+    &-prev {
+      fill: $gray;
+    }
+  }
+
+  &__list:not(:last-child) {
+    margin-right: 6px;
+  }
+
+  &__prev-next{
+    &:hover{
+        background-color: $accent;
+        color: $white;
+        fill: $white;
+    }
+  }
+
+  &-active{
+   box-shadow:0 0 0 1px ;
+  }
+}

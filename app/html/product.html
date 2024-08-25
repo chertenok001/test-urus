@@ -1,0 +1,20 @@
+@include('components/_head.html', {
+"pageTitle":"Страница товара"})
+
+@include('components/_header.html', {
+"linkDishes":"menu__link--active"})
+
+<main class="main">
+
+  @include('components/_breadcrumbs-product.html')
+
+  @include('page-product/_product.html')
+
+   @include('page-product/_tabs.html')
+
+@include('page-product/_interesting.html')
+
+</main>
+
+@include('components/_footer.html')
+@include('components/_footer-scripts.html')

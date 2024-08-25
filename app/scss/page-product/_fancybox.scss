@@ -1,0 +1,27 @@
+.fancybox {
+
+  &__backdrop,
+  &__carousel {
+    @include mq('phone') {
+      display: none;
+    }
+  }
+
+  &__viewport {
+    background-color: $white;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  &__carousel.has-dots {
+    margin-bottom: 0;
+  }
+
+  &__content {
+    transform: scale(1.9);
+  }
+
+  &__carousel {
+    padding: 20px;
+  }
+}

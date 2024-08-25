@@ -1,0 +1,153 @@
+.carousel {
+  max-width: 610px;
+  height: 550px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  margin-right: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px $link;
+
+  @include mq('tablet-2') {
+    margin: 0 auto 30px;
+  }
+
+  @include mq('tablet') {
+    max-width: 450px;
+    height: 450px;
+  }
+
+  @include mq('phone') {
+    max-width: 345px;
+    height: 345px;
+  }
+
+  & img {
+    @include mq('phone') {
+      max-width: 300px;
+      height: 300px;
+    }
+  }
+
+  &__viewport {
+    max-width: 400px;
+
+    @include mq('tablet') {
+      max-width: 300px;
+    }
+  }
+
+  &__slide {
+    width: 400px;
+    padding: 0;
+  }
+
+  &__button.is-close svg {
+    display: none;
+  }
+
+  &__button.is-close {
+    top: 40px;
+    right: 40px;
+    color: $gray;
+    position: absolute;
+
+    &::after {
+      @include pseudo;
+      @extend %bg;
+      width: 32px;
+      height: 32px;
+      background-image: url('../images/icons/icon-close-slider.svg');
+    }
+  }
+
+
+
+  &__dots {
+    top: 0;
+    bottom: 40px;
+    align-items: flex-end;
+  }
+
+  &__dots .carousel__dot:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__dots &__dot:after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: $gray;
+  }
+
+  &__dots &__dot.is-selected:after {
+    background-color: $accent;
+  }
+
+  &__button.is-next svg,
+  &__button.is-prev svg {
+    display: none;
+
+  }
+
+  &__button.is-next {
+    width: 44px;
+    height: 44px;
+    right: 33px;
+
+    &::after {
+      @extend %bg;
+      @include pseudo;
+      width: 18px;
+      height: 32px;
+      background-image: url('../images/icons/icon-slide-arrow-right.svg');
+    }
+  }
+
+  &__button.is-next svg,
+  &__button.is-prev svg {
+    display: none;
+  }
+
+  &__button.is-next {
+    width: 44px;
+    height: 44px;
+    right: 33px;
+
+    &::after {
+      @extend %bg;
+      @include pseudo;
+      width: 18px;
+      height: 32px;
+      background-image: url('../images/icons/icon-slide-arrow-right.svg');
+    }
+  }
+
+  &__button.is-prev {
+    width: 44px;
+    height: 44px;
+    left: 33px;
+
+    &::after {
+      @extend %bg;
+      @include pseudo;
+      width: 18px;
+      height: 32px;
+      background-image: url('../images/icons/icon-slide-arrow-left.svg');
+    }
+  }
+
+  &__button.is-next,
+  &__button.is-prev {
+
+    @include mq('phone') {
+      display: none;
+    }
+  }
+
+
+
+
+}

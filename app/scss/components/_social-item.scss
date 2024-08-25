@@ -1,0 +1,49 @@
+.social-item {
+  display: flex;
+
+  &__list:not(:last-child) {
+    margin-right: 13px;
+  }
+
+  &__icon {
+    transition: fill 0.5s;
+
+    &--facebook {
+      width: 10px;
+      height: 21px;
+      transition: fill 0.5s;
+    }
+
+    &--twitter {
+      width: 21px;
+      height: 17px;
+    }
+
+    &--instagram {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__link {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: $link;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:focus .social-item__icon {
+      fill: $default;
+    }
+
+    &:hover .social-item__icon {
+      fill: $white;
+    }
+
+    &:active .social-item__icon {
+      fill: $other;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.user {
+  padding-right: 1px;
+
+  @include mq('tablet-2') {
+    margin-right: 50px;
+  }
+
+  @include mq('tablet') {
+    margin-right: 30px;
+  }
+
+  @include mq('phone') {
+    margin-right: 11px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__btn {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &:hover .user__num {
+      background-color: $white;
+      color: $other;
+    }
+
+    &:active .user__num {
+      background-color: $other;
+      color: $white;
+    }
+  }
+
+  &__icon {
+    height: 20px;
+    width: 19px;
+    stroke-width: 1.5;
+    fill: transparent;
+    stroke: $default;
+    transition: stroke 0.7s;
+  }
+
+  &__num {
+    position: absolute;
+    padding: 0 5px;
+    top: 7px;
+    left: 34px;
+    border-radius: 50%;
+    background-color: $accent;
+    font-size: 10px;
+    line-height: 1.4;
+    color: $white;
+    transform: translateX(-9px);
+    transition: color 0.7s, background-color 0.7s;
+
+    @include mq('phone') {
+      padding: 0 4px;
+      top: 7px;
+      transform: translateX(-4px);
+    }
+  }
+}

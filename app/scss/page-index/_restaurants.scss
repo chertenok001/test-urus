@@ -1,0 +1,97 @@
+.restaurants {
+  padding: 61px 0 60px;
+  @include mq('desktop') {
+    padding: 50px 0;
+  }
+
+  @include mq('tablet-2') {
+    padding: 40px 0;
+  }
+
+  @include mq('tablet') {
+    padding: 30px 0;
+  }
+
+  @include mq('phone') {
+    padding: 35px 0;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+    text-align: center;
+    padding-right: 10px;
+
+    @include mq('tablet-2') {
+      font-size: 30px;
+    }
+
+    @include mq('tablet') {
+      font-size: 28px;
+    }
+
+    @include mq('phone') {
+      font-size: 24px;
+      padding-left: 10px;
+      margin-bottom: 29px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include mq('desktop') {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    @include mq('tablet') {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 2px;
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(43px);
+
+    li:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    li {
+      button {
+        padding: 0;
+        font-size: 0;
+        background-color: $gray;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+
+        &:focus {
+          box-shadow: 0 0 0 2px $accent;
+        }
+
+        &:hover {
+          border: 2px solid $other-light;
+          background-color: $peachpuff;
+        }
+
+        &:active {
+          background-color: $other-light;
+          box-shadow: none;
+        }
+      }
+
+      &.slick-active button {
+        background-color: $accent;
+      }
+    }
+  }
+}

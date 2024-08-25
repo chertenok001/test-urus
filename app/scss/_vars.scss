@@ -9,6 +9,10 @@ $bg:#F9FAFF;
 $link:#ECECEC;
 $other-light:#FFAE94;
 $internal:#faeded;
+$star:#FFB800;
+$text-product:#505050;
+$border:#e4e4e4;
+
 
 %rubik-300 {
   font-family: 'Rubik', sans-serif;
@@ -37,7 +41,7 @@ $internal:#faeded;
   background-position: center center;
 }
 
-%checkbox-non{
+%checkbox-non {
   width: 1px;
   height: 1px;
   overflow: hidden;
@@ -45,10 +49,7 @@ $internal:#faeded;
   position: absolute;
 }
 
-$breakpoints: (
-  "phone": 576px,
+$breakpoints: ("phone": 576px,
   "tablet": 768px,
   "tablet-2": 992px,
-  "desktop": 1200px
-  );
-
+  "desktop": 1200px);

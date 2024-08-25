@@ -1,0 +1,44 @@
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &__text {
+    margin-right: 15px;
+    font-size: 20px;
+    line-height: 1.3;
+    color: $text-product;
+  }
+
+  &__items {
+    display: flex;
+    cursor: pointer;
+  }
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    position: relative;
+
+    &::before {
+      @include pseudo;
+      background-image: url(../images/sprite.svg#icon-star);
+      width: 16px;
+      height: 16px;
+      @extend %bg;
+      filter: invert(87%) sepia(0%) saturate(398%) hue-rotate(141deg) brightness(92%) contrast(85%);
+    }
+  }
+
+  .rating__star-active::before {
+    filter: invert(91%) sepia(9%) saturate(1292%) hue-rotate(357deg) brightness(96%) contrast(96%);
+  }
+
+  .rating__star-hover::before {
+    filter: invert(70%) sepia(59%) saturate(1398%) hue-rotate(357deg) brightness(100%) contrast(110%);
+  }
+
+  &__star:not(:last-child) {
+    margin-right: 5px;
+  }
+}

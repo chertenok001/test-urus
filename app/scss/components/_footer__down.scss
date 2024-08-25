@@ -1,0 +1,11 @@
+.footer__down {
+  font-size: 14px;
+  padding: 30px 0;
+  text-align: center;
+  color: $default;
+  border-top: 1px solid rgba($gray, 0.2);
+
+  @include mq('phone') {
+    padding: 18px 0 10px;
+  }
+}

@@ -1,0 +1,63 @@
+.footer {
+  @include mq('phone') {
+    padding-top: 23px;
+  }
+
+  &__top {
+    padding: 17px 0px 59px;
+    display: grid;
+    grid-template-columns: 200px auto auto;
+    column-gap: 70px;
+
+    @include mq('desktop') {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 30px;
+    }
+
+    @include mq('phone') {
+      flex-direction: column;
+      padding-bottom: 51px;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 27px;
+    padding-top: 3px;
+
+
+    @include mq('phone') {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__item {
+    max-width: 200px;
+    width: 100%;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 55px;
+    row-gap: 19px;
+    grid-auto-rows: 25px;
+
+    @include mq('desktop') {
+      order: 1;
+    }
+
+    @include mq('tablet') {
+      column-gap: 50px;
+    }
+
+    @include mq('phone') {
+      grid-template-columns: auto;
+      grid-auto-rows: 23px;
+      row-gap: 20px;
+    }
+  }
+
+}

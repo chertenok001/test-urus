@@ -1,0 +1,79 @@
+.restaurants-card {
+  max-width: 370px;
+  width: 100%;
+  box-shadow: 0 3px 3px 0 rgba($default, 0.1);
+  background-color: $white;
+  border-radius: 10px;
+  transition: box-shadow 0.5s;
+
+  @include mq('tablet-2') {
+    max-width: 354px;
+  }
+
+  &:hover {
+    box-shadow: 0 3px 15px 0 rgba($accent, 0.5);
+  }
+
+  &__img {
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+  }
+
+  &__title {
+    @extend %rubik-400;
+    font-size: 24px;
+    line-height: 1.3;
+    @include line-clamp(1);
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    padding: 15px 20px 20px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__time {
+    display: flex;
+  }
+
+  &__mode {
+    @extend %rubik-300;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  &__icon-timer {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+  }
+
+  &__link {
+    padding: 11px 32px;
+    border-radius: 20px;
+    display: flex;
+
+
+    &:focus .restaurants-card__icon {
+      fill: $default;
+    }
+
+    &:hover .restaurants-card__icon {
+      fill: $accent;
+      transform: translateX(20px);
+    }
+  }
+
+  &__icon {
+    width: 14px;
+    height: 12px;
+    fill: white;
+    transition: fill 0.5s,
+      transform 0.5s;
+  }
+}

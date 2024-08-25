@@ -1,0 +1,127 @@
+.menu-mobile {
+  transform: translateX(-200%);
+  transition: transform 0.9s;
+
+  &__link {
+    &--active {
+      color: $accent;
+    }
+  }
+
+  &__top,
+  &__list,
+  &__contacts {
+    display: none;
+  }
+
+
+  @include mq('tablet-2') {
+    position: fixed;
+    background-color: #ffff;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 300px;
+    overflow-y: auto;
+    z-index: 1;
+
+    &__logo {
+      display: block;
+    }
+
+    &--active {
+      padding-bottom: 50px;
+      transform: translateX(0);
+      transition: transform 0.6s;
+    }
+
+    &__top {
+      display: block;
+      display: flex;
+      justify-content: space-between;
+      padding: 31px 14px 50px 27px;
+      border-bottom: 1px solid rgba($gray, 0.2);
+
+      @include mq('phone') {
+        padding: 21px 14px;
+        align-items: flex-end;
+      }
+    }
+
+    &__btn {
+      width: 44px;
+      height: 44px;
+      position: relative;
+      display: block;
+      transition: transform 0.6s,
+        background-color 0.5s,
+        color 0.6s, box-shadow 0.5s;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: $title;
+        width: 30px;
+        height: 2px;
+        left: 7px;
+      }
+
+      &::after {
+        top: 20px;
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+        bottom: 22px;
+      }
+
+      &:focus {
+        background-color: $peachpuff;
+        color: $accent;
+
+        &::after,
+        &::before {
+          background-color: $title;
+        }
+      }
+
+      &:hover {
+        background-color: $other-light;
+
+        &::after,
+        &::before {
+          background-color: $white;
+        }
+      }
+
+      &:active {
+        background-color: $other-light;
+
+        &::after,
+        &::before {
+          background-color: $title;
+        }
+      }
+    }
+
+    &__list {
+      display: block;
+      flex-direction: column;
+      padding: 26px 0 25px 13px;
+      justify-content: space-around;
+      border-bottom: 1px solid rgba($gray, 0.2);
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &__contacts {
+      display: block;
+      padding: 11px 0 0 11px;
+    }
+  }
+}

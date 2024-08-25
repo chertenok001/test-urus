@@ -9,7 +9,7 @@ const browserSync = require('browser-sync').create();
 const svgSprite = require('gulp-svg-sprite');
 const cheerio = require('gulp-cheerio');
 const replace = require('gulp-replace');
-
+const fileInclude = require('gulp-file-include');
 
 
 function browsersync() {
@@ -20,7 +20,6 @@ function browsersync() {
     notofy: false
   })
 }
-
 
 function styles() {
   return src('app/scss/style.scss')
@@ -67,6 +66,8 @@ function scripts() {
     'node_modules/mixitup/dist/mixitup.js',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
     'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+    'node_modules/swiper/swiper-bundle.js',
+    'node_modules/@fancyapps/ui/dist/fancybox.umd.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))
@@ -109,6 +110,7 @@ function cleanDist() {
 
 
 function watching() {
+  watch(['app/html/**/*.html'], htmlInclude);
   watch(['app/images/icons/*.svg'], svgSprites);
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
@@ -116,6 +118,19 @@ function watching() {
 
 }
 
+  const htmlInclude = () => {
+    return src(['app/html/*.html']) 
+      .pipe(fileInclude({
+        prefix: '@',
+        basepath: '@file',
+      }))
+      .pipe(dest('app')) 
+      .pipe(browserSync.stream());
+  }
+
+
+
+exports.htmlInclude = htmlInclude;
 exports.svgSprites = svgSprites;
 exports.styles = styles;
 exports.scripts = scripts;
@@ -124,6 +139,4 @@ exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
-
-
-exports.default = parallel(svgSprites, styles, scripts, browsersync, watching);
+exports.default = parallel(htmlInclude, svgSprites, styles, scripts, browsersync, watching);

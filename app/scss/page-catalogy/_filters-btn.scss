@@ -1,0 +1,19 @@
+.filters-btn {
+  padding: 20px 20px 20px 0;
+  display: none;
+
+  &__close {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $internal;
+    border-radius: 3px;
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+  }
+}

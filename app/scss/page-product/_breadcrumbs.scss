@@ -1,0 +1,11 @@
+.breadcrumbs {
+ @include mq('phone') {
+ margin-bottom: 30px;
+ }
+ 
+&__item--active{
+@include mq('phone'){
+  display: none;
+}
+}
+}

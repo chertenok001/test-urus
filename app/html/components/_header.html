@@ -1,0 +1,128 @@
+<header class="header" id="header">
+  <div class="header__top ">
+    <div class="container">
+
+      <nav class="menu d-flex f-jcfe f-aic">
+        <a class="logo header__logo" href="#header">
+          <img class="logo__img" src="images/header_logo.svg" width="200" height="40" alt="логотип">
+        </a>
+
+        <button class="menu__btn" type="button">
+          <span></span>
+          <span class="sr-only">кнопка открыть меню</span>
+        </button>
+
+        <ul class="menu__list d-flex">
+          <li class="menu__item">
+            <a class="menu__link animation-link @linkMain" href="#">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link animation-link @linkDishes" href="#">Блюда</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link animation-link " href="#contacts">Контакты</a>
+          </li>
+        </ul>
+
+        <div class="menu-mobile">
+
+          <div class="menu-mobile__top">
+            <a class="menu-mobile__logo logo" href="#">
+              <img class="logo__img" src="images/header_logo.svg" width="200" height="40" alt="логотип">
+            </a>
+
+            <button class="menu-mobile__btn" type="button">
+              <span class="sr-only">кнопка открыть меню</span>
+            </button>
+          </div>
+
+          <ul class="menu-mobile__list d-flex">
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link animation-link menu-mobile__link--active" href="#">Главная</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link animation-link" href="#">Блюда</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a class="menu-mobile__link animation-link " href="#">Контакты</a>
+            </li>
+          </ul>
+
+          <address class="menu-mobile__contacts contacts  ">
+            <ul class="contacts__search ">
+
+              <li class="contacts__item">
+                <a class="contacts__link animation-link contacts__link--street" href="#">
+                  ул. Т.Г.Шевченко, 1
+                </a>
+              </li>
+
+              <li class="contacts__item">
+                <a class="contacts__link animation-link contacts__link--calling" href="tel:+380501112233">
+                  380501112233
+                </a>
+              </li>
+
+              <li class="contacts__item">
+                <a class="contacts__link animation-link contacts__link--message" href="mailto:support@sfood.com">
+                  support@sfood.com
+                </a>
+              </li>
+            </ul>
+
+            <ul class="social-item">
+              <li class="social-item__list">
+                <a class="social-item__link social-anm" href="#" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-item__icon social-item__icon--facebook">
+                    <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                  <span class="sr-only">наш фейсбук</span>
+                </a>
+              </li>
+
+              <li class="social-item__list">
+                <a class="social-item__link social-anm" href="#" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-item__icon social-item__icon--twitter">
+                    <use xlink:href="images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                  <span class="sr-only">ссылка на твитер</span>
+                </a>
+              </li>
+
+              <li class="social-item__list">
+                <a class="social-item__link social-anm" href="#" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-item__icon social-item__icon--instagram">
+                    <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                  <span class="sr-only">ссылка на инстаграм</span>
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <ul class="user d-flex f-aic">
+          <li class="user__item">
+
+            <button class="user__btn social-anm" type="button">
+              <svg class="user__icon">
+                <use xlink:href="images/sprite.svg#icon-search"></use>
+
+              </svg>
+              <span class="sr-only">форма поиска</span>
+            </button>
+          </li>
+
+          <li class="user__item">
+            <button class="user__btn social-anm" type="button">
+              <svg class="user__icon ">
+                <use xlink:href="images/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="user__num">4</span>
+              <span class="sr-only">выбраные товары</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

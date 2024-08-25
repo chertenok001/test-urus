@@ -1,0 +1,52 @@
+.breadcrumbs {
+  background-color: #fff2ed;
+  height: 65px;
+  margin-bottom: 60px;
+
+  @include mq('tablet-2') {
+    margin-bottom: 50px;
+  }
+
+  @include mq('tablet') {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    padding: 18px 0;
+  }
+
+  &__item {
+    padding-right: 15px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/icon-breadcrumbs.svg');
+      width: 6px;
+      height: 10px;
+      right: 0;
+      top: 9px;
+    }
+
+    &:last-child {
+      padding: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    @extend %rubik-400;
+  
+   letter-spacing: 0.03em;
+  }
+}
