@@ -1,18 +1,24 @@
-@include('components/_head.html', {
-"pageTitle":"Simple Food"})
+<!DOCTYPE html>
+<html lang="en">
 
-@include('components/_header.html', {
-"linkMain":"menu__link--active"
-})
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
 
-<main class="main">
-  @include('page-index/_hero.html')
-  @include('page-index/_assortment.html')
-  @include('page-index/_delivery.html')
-  @include('page-index/_restaurants.html')
-  @include('page-index/_reviews.html')
-  @include('components/_applications.html')
+<body>
 
-</main>
-@include('components/_footer.html')
-@include('components/_footer-scripts.html')
+  <header class="header"></header>
+
+  <main class="main"></main>
+
+
+  <footer class="footer"></footer>
+
+  <script src="js/main.min.js"></script>
+
+</body>
+
+</html>

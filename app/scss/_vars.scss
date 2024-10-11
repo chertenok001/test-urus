@@ -1,55 +1,15 @@
-$accent:#FF6838;
-$default:#31352B;
-$title:#363853;
-$other: #ff7a50;
-$gray:#C2C2C2;
-$white:#FFFFFF;
-$peachpuff:#fff2ed;
-$bg:#F9FAFF;
-$link:#ECECEC;
-$other-light:#FFAE94;
-$internal:#faeded;
-$star:#FFB800;
-$text-product:#505050;
-$border:#e4e4e4;
+
+// $accent:#FF6838;
+// $default:#31352B;
 
 
-%rubik-300 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 300;
-}
+// %rubik-300 {
+//   font-family: 'Rubik', sans-serif;
+//   font-weight: 300;
+// }
 
-%rubik-italic {
-  font-family: 'Rubik';
-  font-weight: 400;
-  font-style: italic;
-}
-
-%rubik-400 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
-}
-
-%rubik-500 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 500;
-}
-
-%bg {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-%checkbox-non {
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  position: absolute;
-}
-
-$breakpoints: ("phone": 576px,
-  "tablet": 768px,
-  "tablet-2": 992px,
-  "desktop": 1200px);
+// %rubik-italic {
+//   font-family: 'Rubik';
+//   font-weight: 400;
+//   font-style: italic;
+// }
