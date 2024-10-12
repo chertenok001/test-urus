@@ -1,15 +1,20 @@
-
-// $accent:#FF6838;
+$accent:#FF5017;
 // $default:#31352B;
 
 
-// %rubik-300 {
-//   font-family: 'Rubik', sans-serif;
-//   font-weight: 300;
-// }
+%inter-300 {
+  font-family: 'Inter-Black', sans-serif;
+  font-weight: 300;
+}
 
-// %rubik-italic {
-//   font-family: 'Rubik';
-//   font-weight: 400;
-//   font-style: italic;
-// }
+%inter-900 {
+  font-family: 'Inter-Black', sans-serif;
+  font-weight: 900;
+}
+
+
+%bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center ;
+}
