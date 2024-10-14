@@ -5,7 +5,7 @@ body {
   font-size: 24px;
   line-height: 1.4;
   @extend %inter-900;
-  
+
 }
 
 .main {
@@ -17,6 +17,15 @@ body {
   margin: 0 auto;
   padding: 0 10px;
 }
+
+.title {
+  @extend %inter-900;
+  font-size: 160px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+
 
 .sr-only {
   position: absolute;
