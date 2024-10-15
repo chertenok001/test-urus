@@ -1,15 +1,10 @@
 .header {
   min-height: 100vh;
   @extend %bg;
-  // position: relative;
-
-
-
 
   &__top {
     padding-top: 50px;
   }
-
 
   &__btn {
     width: 70px;
@@ -34,7 +29,6 @@
     }
   }
 
-
   &__content {
     display: flex;
     justify-content: space-between;
@@ -55,8 +49,6 @@
     padding-left: 150px;
   }
 
-
-
   &__subtitle {
     @extend %inter-900;
     font-size: 160px;
@@ -69,8 +61,6 @@
     padding-right: 80px;
   }
 
-
-
   &__img {
     position: absolute;
     left: 0;
@@ -79,5 +69,4 @@
     bottom: 0;
     margin: auto;
   }
-
 }
